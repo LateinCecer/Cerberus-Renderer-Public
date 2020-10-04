@@ -1,0 +1,10 @@
+.idea
+target
+Cerberus-Renderer.iml
+run/
+!run/textures/
+run/shaders/
+!run/shaders/cerberus/
+!run/shaders/util/
+/run/colors/
+/run/config/

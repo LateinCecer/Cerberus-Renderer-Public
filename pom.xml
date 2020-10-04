@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Cerberus-Renderer is a OpenGL-based rendering engine.
+  ~ Visit https://cerberustek.com for more details
+  ~ Copyright (c)  2020  Adrian Paskert
+  ~ All rights reserved.
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program. See the file LICENSE included with this
+  ~ distribution for more information.
+  ~ If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.cerberus</groupId>
+    <artifactId>Cerberus-Renderer</artifactId>
+    <version>1.12p-linux</version>
+
+    <repositories>
+        <repository>
+            <id>sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases><enabled>false</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.cerberus</groupId>
+            <artifactId>Cerberus-Math</artifactId>
+            <version>1.11p</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.cerberus</groupId>
+            <artifactId>Cerberus-Data</artifactId>
+            <version>1.11p</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.cerberus</groupId>
+            <artifactId>Cerberus-Net</artifactId>
+            <version>1.11p</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.cerberus</groupId>
+            <artifactId>Cerberus-Registry</artifactId>
+            <version>1.11p</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.cerberus</groupId>
+            <artifactId>Cerberus-Event</artifactId>
+            <version>1.11p</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>16.0.1</version>
+        </dependency>
+
+        <!-- LWJGL Dependencies START -->
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-egl</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-glfw</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-jawt</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-jemalloc</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-lmdb</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-nanovg</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-nfd</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-nuklear</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-openal</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opencl</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opengl</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opengles</artifactId><version>${lwjgl.version}</version></dependency>
+        <!-- <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-ovr</artifactId><version>${lwjgl.version}</version></dependency> -->
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-par</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-sse</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-stb</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-tinyfd</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-vulkan</artifactId><version>${lwjgl.version}</version></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-xxhash</artifactId><version>${lwjgl.version}</version></dependency>
+
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-glfw</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-jemalloc</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-lmdb</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-nanovg</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-nfd</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-nuklear</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-openal</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opengl</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-opengles</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <!-- <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-ovr</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency> -->
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-par</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-sse</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-stb</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-tinyfd</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <dependency><groupId>org.lwjgl</groupId><artifactId>lwjgl-xxhash</artifactId><version>${lwjgl.version}</version><classifier>${lwjgl.natives}</classifier><scope>runtime</scope></dependency>
+        <!-- LWJGL Dependencies END -->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+
+        <lwjgl.version>3.2.3</lwjgl.version>
+        <lwjgl.natives>natives-linux</lwjgl.natives>
+    </properties>
+</project>

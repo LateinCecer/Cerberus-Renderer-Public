@@ -1,0 +1,18 @@
+
+---[ NAME ]----------------------------------------------[ TYPE ]-----------------[ DEFAULT ]---------------------------
+# fullscreen                                            Bool                        false
+# resizeable                                            Bool                        true
+# vertical_synchronization                              Bool                        true
+
+# callback_error                                        Bool                        false
+# callback_framebuffersize                              Bool                        true
+# callback_window_close                                 Bool                        false
+# callback_window_focus                                 Bool                        true
+# callback_window_iconify                               Bool                        false
+# callback_window_maximize                              Bool                        false
+# callback_window_refresh                               Bool                        false
+# callback_window_reposition                            Bool                        false
+# callback_window_size                                  Bool                        true
+
+# shader_folder						String			    shaders
+
